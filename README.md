@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# My custom Counter app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project hosted on vercel [live link here](https://my-custom-counter-app.vercel.app/).
 
 ## Available Scripts
 
