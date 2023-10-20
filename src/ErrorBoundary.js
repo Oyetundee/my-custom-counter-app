@@ -1,22 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+function ErrorBoundary({ children }) {
+  const [hasError, setHasError] = useState(false);
 
-  componentDidCatch(error, errorInfo) {
-    this.setState({ hasError: true });
+  const componentDidCatch = (error, errorInfo) => {
+    setHasError(true);
     // You can log the error or perform other actions here
+  };
+
+  if (hasError) {
+    return <div>Something went wrong. Error caught by the boundary.</div>;
   }
 
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong. Error caught by the boundary.</div>;
-    }
-    return this.props.children;
-  }
+  return children;
 }
 
 export default ErrorBoundary;
