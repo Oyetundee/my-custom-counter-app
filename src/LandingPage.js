@@ -15,14 +15,19 @@ export default function LandingPage (){
             <h1 id="typewriter" className="main_text">
             <Typewriter 
   options={{
-    strings: ['Welcome To my', 'Custom Counter App', 'Developed by...', 'Barakat Yetunde Oyewole'],
+    strings: 
+    [
+        'Welcome To my', 
+        'Custom Counter App', 
+        'Developed by...', 
+        'Barakat Yetunde Oyewole'
+    ],
     autoStart: true,
     loop: true,
   }}
 />
-            </h1>
-            
-            <Link className="button" to={'/counter'}> Proceed to App</Link>
+        </h1>
+        <Link className="button" to={'/counter'}> Proceed to App</Link>
         </div>
     )
 }

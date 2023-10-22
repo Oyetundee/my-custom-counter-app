@@ -44,11 +44,32 @@ function Counter() {
               </button>
             </div>
             <form onSubmit={(e) => handleSubmitCount(e)}>
-              <input className='input' onChange={(e) => setCountValue(e.target.value)} type="number" name="valueInput" value={countValue} />
-              <button className='button' type="submit">Set Value</button>
+              <input 
+              className='input' 
+              onChange={(e) => setCountValue(e.target.value)} 
+              type="number" 
+              name="valueInput" 
+              value={countValue} 
+              />
+              <button 
+              className='button' 
+              type="submit">
+                Set Value
+              </button>
             </form>
-            <div style={{ width: '80%', display: 'flex', margin: 'auto', gap: 20 }}>
-              <button className="error_button" onClick={() => { setHasError(false) }}>Test Error Boundary</button>
+            <div 
+            style={{ 
+              width: '80%', 
+              display: 'flex', 
+              margin: 'auto', 
+              gap: 20 
+            }}>
+              <button 
+              className="error_button" 
+              onClick={() => { setHasError(false) }}
+              >
+                Test Error Boundary
+              </button>
               <Link to={'/watch'} className="error_button" >Test 404</Link>
             </div>
           </div>
