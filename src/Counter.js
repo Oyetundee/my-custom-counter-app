@@ -11,7 +11,7 @@ function Counter() {
   const handleSubmitCount = (e) => {
     e.preventDefault()
     setValue(Number(countValue))
-    setCountValue('')
+    setCountValue("")
   }
   return (
     < >
@@ -21,9 +21,27 @@ function Counter() {
           <div>
             <div className='counter_displayCount'><h1>Count: {count}</h1></div>
             <div className='counter_fn_btn'>
-              <button type='button' className='button' onClick={() => increment()}>Increment</button>
-              <button type='button' className='button' onClick={() => decrement()}>Decrement</button>
-              <button type='button' className='button' onClick={() => reset()}>Reset</button>
+              <button 
+              type='button' 
+              className='button' 
+              onClick={() => increment()}
+              >
+                Increment
+              </button>
+              <button 
+              type='button' 
+              className='button' 
+              onClick={() => decrement()}
+              >
+                Decrement
+              </button>
+              <button 
+              type='button' 
+              className='button' 
+              onClick={() => reset()}
+              >
+                Reset
+              </button>
             </div>
             <form onSubmit={(e) => handleSubmitCount(e)}>
               <input className='input' onChange={(e) => setCountValue(e.target.value)} type="number" name="valueInput" value={countValue} />
