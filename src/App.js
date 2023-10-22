@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Counter from './Counter';
 import CounterTest from './CounterTest';
 import LandingPage from './LandingPage';
+import NotFound from './NotFound';
 // import ErrorBoundary from './ErrorBoundary';
 // import NotFound from './NotFound';
 
@@ -24,12 +25,11 @@ const App = createBrowserRouter([
           }
         ]
       },
-    
   //   ]
   // },
   {
     path: "*",
-    element: <div><h1>404 - Pages do not exist</h1></div>
+    element: <NotFound/>
   }
 ])
 
