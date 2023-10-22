@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Counter from './Counter';
+import { Outlet } from 'react-router-dom';
 
 function CounterTest() {
+
   return (
-    <div>
-      <h1>Counter Test Page</h1>
-      <Counter />
-    </div>
+    <>
+      <div className='counterTest_title'>
+        <h1>Counter Test Page</h1>
+      </div>
+      <Outlet />
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 function ErrorBoundary({ children }) {
   const [hasError, setHasError] = useState(false);
@@ -12,7 +13,7 @@ function ErrorBoundary({ children }) {
     return <div>Something went wrong. Error caught by the boundary.</div>;
   }
 
-  return children;
+  return <Outlet/>;
 }
 
 export default ErrorBoundary;
